@@ -6,7 +6,6 @@ TagManager:
   tags:
   - LimiteAbajo
   - Checkpoint
-  - Stairs
   layers:
   - Default
   - TransparentFX
