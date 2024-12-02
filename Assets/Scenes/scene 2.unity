@@ -207,6 +207,10 @@ PrefabInstance:
       value: torpedo
       objectReference: {fileID: 0}
     - target: {fileID: 411868, guid: 26f7afb3718727245a184c5904ea5cfa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5399
+      objectReference: {fileID: 0}
+    - target: {fileID: 411868, guid: 26f7afb3718727245a184c5904ea5cfa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 229.3
       objectReference: {fileID: 0}
@@ -216,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 411868, guid: 26f7afb3718727245a184c5904ea5cfa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.212
+      value: 14.16
       objectReference: {fileID: 0}
     - target: {fileID: 411868, guid: 26f7afb3718727245a184c5904ea5cfa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -927,16 +931,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1310822921}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c8b3714673015347bfe5d6831105b93, type: 3}
+  m_Script: {fileID: 11500000, guid: 220feccd484ad924198d6303587376fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementDirection: {x: 1, y: 0, z: 0}
-  moveSpeed: 2
-  moveDistance: 5
+  moveSpeed: 5
+  maxMoveDistance: 10
+  moveHorizontal: 1
   startPosition: {x: 0, y: 0, z: 0}
-  endPosition: {x: 0, y: 0, z: 0}
-  isMoving: 0
-  movementProgress: 0
 --- !u!4 &1363522663 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 497032, guid: b38a3290156af5046a449900e3163984, type: 3}
