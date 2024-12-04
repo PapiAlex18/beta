@@ -16,18 +16,17 @@ public class DebugWeaponDelivery : MonoBehaviour
     void Start()
     {
         // Validaciones iniciales
-        if (weaponPrefab == null)
-            Debug.LogError("¡FALTA: No has asignado el prefab del arma!");
+        if (weaponPrefab == null);
+           
         
-        if (deliveryPoint == null)
-            Debug.LogError("¡FALTA: No has asignado el punto de entrega!");
+        if (deliveryPoint == null);
+            
         
-        if (player == null)
-            Debug.LogError("¡FALTA: No has asignado el jugador!");
+        if (player == null);
+            
         
-        if (weaponHolderPoint == null)
-            Debug.LogError("¡FALTA: No has asignado el punto de agarre del arma!");
-    }
+        if (weaponHolderPoint == null);
+            
 
     void Update()
     {
@@ -37,8 +36,6 @@ public class DebugWeaponDelivery : MonoBehaviour
         // Verificar distancia
         float distancia = Vector3.Distance(player.transform.position, deliveryPoint.position);
         
-        // Depuración de distancia
-        Debug.Log($"Distancia al punto: {distancia}. Radio: {deliveryRadius}");
 
         // Entregar si está cerca
         if (distancia <= deliveryRadius)
@@ -66,18 +63,17 @@ public class DebugWeaponDelivery : MonoBehaviour
         // Activar el arma
         armaEntregada.SetActive(true);
 
-        Debug.Log("¡ARMA ENTREGADA EXITOSAMENTE!");
-
         weaponDelivered = true;
     }
 
     // Mostrar radio de detección en el editor
     void OnDrawGizmos()
     {
-        if (deliveryPoint != null)
+        if (deliveryPoint != null);
         {
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(deliveryPoint.position, deliveryRadius);
         }
     }
+}
 }
