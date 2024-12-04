@@ -45,6 +45,7 @@ public class FantasmaController : MonoBehaviour
 
     void MoverFantasma() 
     {
+        
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
         for(int fantasma=0; fantasma < fantasmaTransform.Length; fantasma++){
