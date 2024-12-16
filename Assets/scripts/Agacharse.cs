@@ -15,7 +15,7 @@ public class MovimientoYAgachado : MonoBehaviour
     void Start()
     {
         // Guardamos la altura original y la posición de la cámara al principio
-        alturaOriginal = transform.localScale.y;
+        alturaOriginal = colision.height;
         posicionOriginalCamara = camara.localPosition;
     }
 
