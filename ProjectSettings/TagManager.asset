@@ -6,6 +6,8 @@ TagManager:
   tags:
   - LimiteAbajo
   - Checkpoint
+  - palanca
+  - Palanca
   layers:
   - Default
   - TransparentFX

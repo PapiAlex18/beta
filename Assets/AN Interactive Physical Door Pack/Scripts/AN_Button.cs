@@ -50,15 +50,24 @@ public class AN_Button : MonoBehaviour
     {
         if (!Locked)
         {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log(!isValve && DoorObject != null && DoorObject.Remote && NearView());
+                Debug.Log("isValve "+isValve);
+                Debug.Log("DoorObject "+DoorObject);
+                Debug.Log("DoorObject.Remote "+DoorObject.Remote);
+                Debug.Log("NearView "+NearView());
+
+            }
             if (Input.GetKeyDown(KeyCode.E) && !isValve && DoorObject != null && DoorObject.Remote && NearView()) // 1.lever and 2.button
             {
-                DoorObject.Action(); // void in door script to open/close
+                //DoorObject.Action(); // void in door script to open/close
                 if (isLever) // animations
                 {
-                    if (DoorObject.isOpened) anim.SetBool("LeverUp", true);
-                    else anim.SetBool("LeverUp", false);
+                    anim.SetBool("LeverUp", true);
                 }
                 else anim.SetTrigger("ButtonPress");
+                isOpened = true;
             }
             else if (isValve && RampObject != null) // 3.valve
             {
@@ -102,7 +111,8 @@ public class AN_Button : MonoBehaviour
     {
         distance = Vector3.Distance(transform.position, Camera.main.transform.position);
         direction = transform.position - Camera.main.transform.position;
-        angleView = Vector3.Angle(Camera.main.transform.forward, direction);
+        angleView = Vector3.Angle(Camera.main.transform.forward, direction);    
+
         if (angleView < 45f && distance < 2f) return true;
         else return false;
     }

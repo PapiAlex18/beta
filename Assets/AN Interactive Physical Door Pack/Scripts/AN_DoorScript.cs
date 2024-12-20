@@ -55,6 +55,7 @@ public class AN_DoorScript : MonoBehaviour
     {
         if (!Locked)
         {
+            Debug.Log("ACTION");
             // key lock checking
             if (HeroInteractive != null && RedLocked && HeroInteractive.RedKey)
             {
@@ -76,6 +77,7 @@ public class AN_DoorScript : MonoBehaviour
             {
                 isOpened = true;
                 rbDoor.AddRelativeTorque(new Vector3(0, 0, 20f)); 
+                Debug.Log("OPEN");
             }
         
         }
